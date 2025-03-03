@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, FlatList, StyleSheet } from 'react-native';
 import CompagnieTable from './Table';
 
-const API_BASE_URL = 'http://127.0.0.1:8080'; // Sostituisci con il tuo IP locale
+const API_BASE_URL = 'http://127.0.0.1:8083'; // Sostituisci con il tuo IP locale
 
 const fetchData = async (endpoint, setData) => {
   try {

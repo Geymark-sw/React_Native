@@ -71,7 +71,7 @@ def getCompagnia():
     except Exception as e:
         app.logger.error(f"Database query failed: {e}")
         try:
-            with open("./json/compagnie.json", "r") as file:
+            with open("../Json/compagnie.json", "r") as file:
                 comp = json.load(file)
             return jsonify(comp)
         except Exception as e:
@@ -91,14 +91,14 @@ def getVoliInPartenza():
         return jsonify(voli_list)
     except Exception as e:
         app.logger.error(f"Errore durante l'esecuzione della query: {e}")
-        json_data = loadJson("./json/voliInPartenza.json")
+        json_data = loadJson("../Json/voliInpartenza.json")
         if "error" in json_data:
             return jsonify({"error": "Errore nel database e nel caricamento del file JSON", "details": json_data}), 500
         return jsonify(json_data)
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8080)
+    app.run(debug=True, port=8083)
 
 
 

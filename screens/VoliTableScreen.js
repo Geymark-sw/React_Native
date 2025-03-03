@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import VoliTable from './VoliTable';
 
-const API_BASE_URL = 'http://127.0.0.1:8080'; // Sostituisci con l'IP locale della tua macchina
+const API_BASE_URL = 'http://127.0.0.1:8083'; // Sostituisci con l'IP locale della tua macchina
 
 const fetchData = async (endpoint, setData) => {
   try {
