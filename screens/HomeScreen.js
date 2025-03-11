@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-const API_BASE_URL = 'http://127.0.0.1:8080'; // Sostituisci con l'indirizzo IP corretto
+const API_BASE_URL = 'http://127.0.0.1:8083'; // Sostituisci con l'indirizzo IP corretto
 
 const fetchData = async (endpoint, setData) => {
   try {
@@ -38,13 +38,13 @@ const HomeScreen = () => {
 
   return (
     <ImageBackground 
-      source={require('../assets/airplane-bg.jpg')} 
+      source={require('../assets/bg.jpg')} 
       style={styles.background}
       resizeMode='repeat'
     >
       <View style={styles.overlay}>
-        <Text style={styles.header}>Compagnie Aeree</Text>
-        <Text style={styles.subHeader}>Scopri le migliori compagnie del mondo!</Text>
+        <Text style={styles.header}>Fly Scanner</Text>
+        <Text style={styles.subHeader}>Esplora le nostre compagnie!</Text>
         
         <FlatList
           data={compagnie}
